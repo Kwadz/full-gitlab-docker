@@ -9,6 +9,8 @@ services:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://gitlab.local:8090'
         # Add any other gitlab.rb configuration here, each on its own line
+        registry_external_url 'http://gitlab.local:5050'
+        registry['enable'] = true
     ports:
       - '8090:8090'
       - '443:443'
